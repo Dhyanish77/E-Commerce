@@ -6,20 +6,19 @@ import { Link } from 'gatsby';
 const ContactPage: React.FC = () => {
   return (
     <Layout>
-      
       <div className="pt-3" />
-      
+      {/* Breadcrumb */}
       <nav aria-label="breadcrumb" className="mb-5 mt-3">
         <ol className="breadcrumb bg-white px-0">
           <li className="breadcrumb-item">
             <Link to="/">Home</Link>
           </li>
-          <li className="breadcrumb-item active fw-bold " aria-current="page">
+          <li className="breadcrumb-item active " aria-current="page">
             Contact
           </li>
         </ol>
       </nav>
-      
+
       <div className="mb-5 mt-3" />
       <div className="row g-4 mb-5">
         {/* Contact Info Card */}
@@ -27,7 +26,10 @@ const ContactPage: React.FC = () => {
           <div className="card shadow-lg " style={{ height: '400px' }}>
             <div className="card-body">
               <div className="d-flex align-items-center mt-1 mb-3">
-                <span className="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3" style={{ width: 40, height: 40 }}>
+                <span
+                  className="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                  style={{ width: 40, height: 40 }}
+                >
                   <i className="bi bi-telephone fs-4"></i>
                 </span>
                 <div>
@@ -38,7 +40,10 @@ const ContactPage: React.FC = () => {
               <p className="mb-4">Phone: +880611122222</p>
               <hr />
               <div className="d-flex align-items-center mb-3 mt-4">
-                <span className="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3" style={{ width: 40, height: 40 }}>
+                <span
+                  className="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                  style={{ width: 40, height: 40 }}
+                >
                   <i className="bi bi-envelope fs-4"></i>
                 </span>
                 <div>
@@ -58,17 +63,37 @@ const ContactPage: React.FC = () => {
               <form>
                 <div className="row g-3 mb-4 mt-1">
                   <div className="col-md-4">
-                    <input type="text" className="form-control" placeholder="Your Name *" required />
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Your Name *"
+                      required
+                    />
                   </div>
                   <div className="col-md-4">
-                    <input type="email" className="form-control" placeholder="Your Email *" required />
+                    <input
+                      type="email"
+                      className="form-control"
+                      placeholder="Your Email *"
+                      required
+                    />
                   </div>
                   <div className="col-md-4">
-                    <input type="tel" className="form-control" placeholder="Your Phone *" required />
+                    <input
+                      type="tel"
+                      className="form-control"
+                      placeholder="Your Phone *"
+                      required
+                    />
                   </div>
                 </div>
                 <div className="mb-4">
-                  <textarea className="form-control" rows={9} placeholder="Your Message" required></textarea>
+                  <textarea
+                    className="form-control"
+                    rows={9}
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
                 </div>
                 <div className="text-end">
                   <Button text="Send Message" width="180px" />
@@ -84,4 +109,4 @@ const ContactPage: React.FC = () => {
   );
 };
 
-export default ContactPage; 
+export default ContactPage;
